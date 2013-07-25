@@ -1,0 +1,23 @@
+{
+  "name": "web-stream",
+  "version": "0.0.2",
+  "description": "transform stream for http with optional retry",
+  "main": "index.js",
+  "dependencies": {
+    "request": "~2.25.0",
+    "readable-stream": "~1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": "git@github.com:elee/web-stream.git",
+  "author": "thenorthsecedes@gmail.com",
+  "bugs": {
+    "url": "https://github.com/elee/web-stream/issues"
+  },
+  "license": "BSD",
+  "keywords": [
+    "streams"
+  ]
+}
