@@ -4,9 +4,7 @@ request = require('request');
 
 var WebStream = function(options) {
   options = options || {};
-  this.shouldRetry = options.shouldRetry || function(err, res, body) {
-    return false;
-  };
+  this.shouldRetry = options.shouldRetry || neverRetryDefaultStraegy;
   if (options.maxBackoff)
     this.maxBackoff = options.maxBackoff;
   Parent.call(this, {objectMode : true});
@@ -24,6 +22,7 @@ var foo = function(stream, chunk, callback, attempt) {
     if(!stream.shouldRetry(err, res, body)) {
       stream.push(
         JSON.stringify({error: err, response: res.statusCode}) + '\n'
+        //{ err : err,  res : res, body : body }
       );
       return callback(false);
     }
@@ -41,6 +40,10 @@ function delayFor(attempt, maxDelay) {
   if (maxDelay)
     result = Math.min(result, maxDelay);
   return result;
+}
+
+function neverRetryDefaultStraegy(err, res, body) {
+  return false;
 }
 
 module.exports = WebStream;
