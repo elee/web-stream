@@ -1,5 +1,7 @@
 var should = require('should');
 var WebStream = require('..');
+var SourceStream = require('./sourceStream');
+var AssertionStream = require('./sourceStream');
 
 describe('#ctor', function() {
   describe('options argument', function() {
@@ -25,7 +27,11 @@ describe('#ctor', function() {
 
 describe('input object', function() {
   it.skip('specifies a url attribute', function() {
-    new Readable({objectMode : true});
+    var source = new SourceStream(['good', 'good', 'bad']);
+    var webStream = new WebStream();
+    source
+      .pipe(webStream)
+      .pipe(assertonStream);
   });
 });
 

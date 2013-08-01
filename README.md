@@ -31,4 +31,8 @@ run the example:
      $ npm install
      $ cd example ; node .
 
+Contributing
+----
+Run the tests:
 
+    grunt

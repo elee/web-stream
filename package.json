@@ -8,8 +8,12 @@
     "readable-stream": "~1.0.2"
   },
   "devDependencies": {
-    "should": "1.2.1",
-    "mocha": "1.12.0"
+    "should": "~1.2.2",
+    "mocha": "~1.12.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9"
   },
   "scripts": {
     "test": "test"
