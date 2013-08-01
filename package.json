@@ -16,7 +16,7 @@
     "grunt-cli": "~0.1.9"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "./node_modules/grunt-cli/bin/grunt"
   },
   "repository": {
     "type": "git",
