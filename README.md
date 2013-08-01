@@ -1,6 +1,8 @@
 web-stream
 ==========
 
+[![Build Status](https://travis-ci.org/elee/web-stream.png)](https://travis-ci.org/elee/web-stream)
+
 Transform objects to http responses with configurable retry strategy.
 
 Construct the stream:
