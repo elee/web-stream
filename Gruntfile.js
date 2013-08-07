@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         throw new Error('error running mocha ' + stderr);
       else
         console.log('done generating test coverage report: coverage.html');
-    })
+    });
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
