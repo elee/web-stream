@@ -1,5 +1,5 @@
 var should = require('should');
-var WebStream = require('..');
+var WebStream = require('../lib');
 var SourceStream = require('./sourceStream');
 var AssertionStream = require('./sourceStream');
 

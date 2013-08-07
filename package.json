@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "request": "~2.25.0",
-    "readable-stream": "~1.0.2"
+    "readable-stream": "~1.0.2",
+    "blanket": "~1.1.5"
   },
   "devDependencies": {
     "should": "~1.2.2",
@@ -13,10 +14,16 @@
     "grunt-simple-mocha": "~0.4.0",
     "grunt-contrib-jshint": "~0.6.2",
     "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.9"
+    "grunt-cli": "~0.1.9",
+    "blanket": "~1.1.5",
+    "grunt-blanket": "0.0.8"
   },
   "scripts": {
-    "test": "./node_modules/grunt-cli/bin/grunt"
+    "test": "./node_modules/grunt-cli/bin/grunt",
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
   },
   "repository": {
     "type": "git",
